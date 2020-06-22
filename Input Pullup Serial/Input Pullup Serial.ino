@@ -9,9 +9,9 @@ void setup() {
 }
 
 void loop() {
-  value=digitalRead(input)
+  value=digitalRead(input);
   if(value==HIGH){
-    digitalWrite(intput,LOW);
+    digitalWrite(input,LOW);
   }
   else{
     digitalWrite(input,HIGH);
