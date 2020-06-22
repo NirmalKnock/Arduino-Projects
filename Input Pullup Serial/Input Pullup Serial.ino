@@ -1,8 +1,10 @@
-int input=13;
-int value;
+int input=9  ;
+int led=13;
+bool value;
 void setup() {
   Serial.begin(9600);
   pinMode(input,INPUT_PULLUP);
+  pinMode(led,OUTPUT);
   
   // put your setup code here, to run once:
 
@@ -11,10 +13,10 @@ void setup() {
 void loop() {
   value=digitalRead(input);
   if(value==HIGH){
-    digitalWrite(input,LOW);
+    digitalWrite(led,LOW);
   }
   else{
-    digitalWrite(input,HIGH);
+    digitalWrite(led,HIGH);
   }
   
 
