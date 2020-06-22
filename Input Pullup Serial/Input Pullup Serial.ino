@@ -1,23 +1,21 @@
-int input=9  ;
-int led=13;
-bool value;
 void setup() {
+  //start serial connection
   Serial.begin(9600);
-  pinMode(input,INPUT_PULLUP);
-  pinMode(led,OUTPUT);
-  
-  // put your setup code here, to run once:
+  //configure pin 2 as an input and enable the internal pull-up resistor
+  pinMode(2, INPUT_PULLUP);
+  pinMode(13, OUTPUT);
 
 }
 
 void loop() {
-  value=digitalRead(input);
-  if(value==HIGH){
-    digitalWrite(led,LOW);
-  }
-  else{
-    digitalWrite(led,HIGH);
-  }
-  
+  int sensorVal = digitalRead(2);
 
+  Serial.println(sensorVal);
+
+
+  if (sensorVal == HIGH) {
+    digitalWrite(13, LOW);
+  } else {
+    digitalWrite(13, HIGH);
+  }
 }
