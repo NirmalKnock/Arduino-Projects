@@ -1,4 +1,4 @@
-int value;
+int reading;
 
 void setup() {
   
@@ -8,8 +8,8 @@ void setup() {
 }
 
 void loop() {
-  value=analogRead(A0);
-  Serial.println(value);
+  reading=analogRead(A0);
+  Serial.println(reading);
   delay(500);
   // put your main code here, to run repeatedly:
 
