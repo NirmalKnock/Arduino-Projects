@@ -1,26 +1,26 @@
-int irsensor=8; // connect sensor out pin to 9th pin of arduino.
-int pump=9; // connect relay pin to 8 th pin of arduino.
-int value;
-
+int irsensor=8; // connect 8th pin input from ir output
+int pump=9; // connect to relay from
+bool value;
+int i;
 void setup() {
+  pinMode(irsensor,INPUT);
+  pinMode(pump,OUTPUT);
   Serial.begin(9600);
-  pinMode(8,INPUT);
-  pinMode(9,OUTPUT);
 }
 
 void loop() {
-  value=digitalRead(irsensor);//Reading input value
-  Serial.println("Reading sensor output");
-  if(value==HIGH){
+ value=digitalRead(irsensor);
+ if (value==HIGH){
+  Serial.println("ON");
+  for(i=0;i<=10;i++){
     digitalWrite(pump,HIGH);
-    delay(10000); // 10 seconds motor ON (or) you can change seconds
-    Serial.println("PUMP ON");
+    Serial.println(i);
+    delay(1000);
   }
-  else{
-    digitalWrite(pump,LOW);
-    Serial.println("PUMP OFF");
-  }
-  
-  
+ }
+ else{
+  digitalWrite(pump,LOW);
+  Serial.println("OFF");
+ }
 
 }
