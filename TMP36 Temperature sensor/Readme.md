@@ -1,4 +1,4 @@
-#Usage and DataSheet
+# Usage and DataSheet
 ## Circuit Diagram of TMP36
 ![TMP36](https://github.com/NirmalKnock/images/blob/master/tmp.png)
 
