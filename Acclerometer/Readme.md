@@ -1,1 +1,3 @@
 # Accelerometer
+
+## Components
