@@ -5,3 +5,6 @@
   ### G per ADC Unit :  G/sV * 3.3v/1023ADC
    
  ## Final equation : G = (x-512) * 3.3v/(s.1023)
+ 
+ ## Sensitivity for harware is s= 0.33   
+ ## for simulation s=0.202
