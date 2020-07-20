@@ -1,20 +1,22 @@
-#include<EEPROM.h>
+#include<Servo.h>
+const int servomotor=9;
+Servo servo;
 void setup() {
-  Serial.begin(9600);
- 
- 
-
+  servo.attach(servomotor);
+  
 }
 
 void loop() {
-  int value=analogRead(A0);
-  
-  for(int i=0;i<=1024;i++){
-    EEPROM.write(i,value);
+  servo.write(90);
+  delay(1000);
+  servo.wrote(180);
+  delay(1000);
+  servo.write(0);
+  delay(1000);
+  for (int pos=0;pos<=180;pos +=5){
+    servo.write(pos);
+    delay(50);
     
-    int next=EEPROM.read(i);
-    Serial.println(next);
-    delay(10);
   }
 
 }
