@@ -1,4 +1,4 @@
-int reading;
+int pinreading;
 
 void setup() {
   
@@ -8,9 +8,9 @@ void setup() {
 }
 
 void loop() {
-  reading=analogRead(A0);
-  Serial.println(reading);
+  pinreading=analogRead(A0);     
+  Serial.println(pinreading);
   delay(500);
-  // put your main code here, to run repeatedly:
+  
 
 }
